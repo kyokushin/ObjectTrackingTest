@@ -9,27 +9,35 @@ extern "C" {
 #endif
 /*
  * Class:     jp_dip_firstnote_objecttrackingtest_MedianTracker
- * Method:    nativeInit
- * Signature: (JLorg/opencv/core/Rect;)V
+ * Method:    nativeNew
+ * Signature: ()J
  */
-JNIEXPORT void JNICALL Java_jp_dip_firstnote_objecttrackingtest_MedianTracker_nativeInit
-  (JNIEnv *, jobject, jlong, jobject);
-
-/*
- * Class:     jp_dip_firstnote_objecttrackingtest_MedianTracker
- * Method:    nativeRelease
- * Signature: ()V
- */
-JNIEXPORT void JNICALL Java_jp_dip_firstnote_objecttrackingtest_MedianTracker_nativeRelease
+JNIEXPORT jlong JNICALL Java_jp_dip_firstnote_objecttrackingtest_MedianTracker_nativeNew
   (JNIEnv *, jobject);
 
 /*
  * Class:     jp_dip_firstnote_objecttrackingtest_MedianTracker
- * Method:    nativeUpdate
- * Signature: (JLorg/opencv/core/Rect;)V
+ * Method:    nativeInit
+ * Signature: (JJIIII)V
  */
-JNIEXPORT void JNICALL Java_jp_dip_firstnote_objecttrackingtest_MedianTracker_nativeUpdate
-  (JNIEnv *, jobject, jlong, jobject);
+JNIEXPORT void JNICALL Java_jp_dip_firstnote_objecttrackingtest_MedianTracker_nativeInit
+  (JNIEnv *, jobject, jlong, jlong, jint, jint, jint, jint);
+
+/*
+ * Class:     jp_dip_firstnote_objecttrackingtest_MedianTracker
+ * Method:    nativeRelease
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_jp_dip_firstnote_objecttrackingtest_MedianTracker_nativeRelease
+  (JNIEnv *, jobject, jlong);
+
+/*
+ * Class:     jp_dip_firstnote_objecttrackingtest_MedianTracker
+ * Method:    nativeUpdate
+ * Signature: (JJLorg/opencv/core/Rect;)Z
+ */
+JNIEXPORT jboolean JNICALL Java_jp_dip_firstnote_objecttrackingtest_MedianTracker_nativeUpdate
+  (JNIEnv *, jobject, jlong, jlong, jobject);
 
 #ifdef __cplusplus
 }
