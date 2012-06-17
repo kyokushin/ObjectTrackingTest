@@ -17,8 +17,8 @@ public class ObjectTrackingTestActivity extends Activity {
         Rect rect = new Rect();
         
         MedianTracker tracker = new MedianTracker();
-        tracker.nativeInit(mat.getNativeObjAddr(), rect);
-        tracker.nativeRelease();
-        tracker.nativeUpdate(mat.getNativeObjAddr(), rect);
+        tracker.init(mat, rect);
+        tracker.release();
+        tracker.update(mat, rect);
     }
 }
